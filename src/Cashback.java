@@ -11,20 +11,20 @@ public class Cashback {
         // на экран.
         int balance = 400;
         int refill = 1100;
-        int x = refill / 100;
-        int y = refill / 100 + refill + balance;
-        int i = balance + refill;
+        int cashback = refill / 100;
+        int balanceWithBonus = cashback + refill + balance;
+        int balanceNoBonus = balance + refill;
 
         int amount;
         if (refill >= 1000) {
-            amount = y;
+            amount = balanceWithBonus;
         } else {
-            amount = i;
+            amount = balanceNoBonus;
         }
-        // int amount = refill >= 1000 ? y : i;
+        // int amount = refill >= 1000 ? balanceWithBonus : balanceNoBonus;
         int bonus;
         if (refill >= 1000){
-            bonus = x;
+            bonus = cashback;
         } else {
             bonus = 0;
         }
